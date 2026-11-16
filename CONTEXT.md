@@ -48,7 +48,7 @@ Full retrain ≈ 25 minutes; `src/fairness.py` reductions are cached in `runs/re
 Add an entry for every change: date, who, what changed, why, how it was checked, what is left.
 
 ### 2026-11-16 · Anish (with Claude) · repository created
-- Put the project under git and pushed it to a private GitHub repository for the team.
+- Put the project under git and pushed it to a public GitHub repository (https://github.com/Anish-Biradar/cap501) so the team can use the link.
 - Added this file and `.claude/` to `.gitignore`. No code changes.
 
 ### 2026-10-27 · Anish (with Claude) · progress deck, outside the repo
