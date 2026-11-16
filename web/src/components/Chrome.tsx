@@ -4,7 +4,7 @@ import { api } from "../lib/api";
 import { href, type Route } from "../lib/router";
 import { LinkButton } from "./Button";
 
-export const PRODUCT = "Assay";
+export const PRODUCT = "Parity";
 
 export function Mark({ className = "h-7 w-7" }: { className?: string }) {
   return (

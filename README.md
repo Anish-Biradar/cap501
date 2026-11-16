@@ -1,4 +1,4 @@
-# Assay: credit default prediction with fairness constraints (CAP 501)
+# Parity: credit default prediction with fairness constraints (CAP 501)
 
 A governed credit-scoring pipeline on the Home Credit Default Risk data. It covers the run ladder from the
 mid-term plan: data assembly with leakage control, XGBoost, calibration, fairness mitigation, SHAP and DiCE,

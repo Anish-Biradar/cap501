@@ -8,8 +8,8 @@ and what is left.
 ## What the project is
 
 CAP 501 capstone (ATLAS SkillTech University): credit default prediction with fairness constraints, on the
-Home Credit Default Risk data (Kaggle). The code and console still call it **Assay**; the progress-review
-deck calls it **Parity** (renamed in the deck only, not in the code).
+Home Credit Default Risk data (Kaggle). The product is called **Parity**: in the code, the web console, the
+README and the progress-review deck. (It was called "Assay" until 16 Nov 2026; use Parity everywhere.)
 
 - `src/` the pipeline (data → features → XGBoost → calibration → fairness policy → explanations → monitoring → gate)
 - `api/` FastAPI scoring service, console endpoints, batch scoring
@@ -47,6 +47,11 @@ Full retrain ≈ 25 minutes; `src/fairness.py` reductions are cached in `runs/re
 
 Add an entry for every change: date, who, what changed, why, how it was checked, what is left.
 
+### 2026-11-16 · Anish (with Claude) · renamed Assay to Parity
+- The product name is now Parity everywhere: README title, web console (nav, footer, browser tab:
+  `web/src/components/Chrome.tsx` PRODUCT, `web/index.html`), package name `parity-credit-console`.
+- Rebuilt `web/dist`; tests and gate re-run.
+
 ### 2026-11-16 · Anish (with Claude) · repository created
 - Put the project under git and pushed it to a public GitHub repository (https://github.com/Anish-Biradar/cap501) so the team can use the link.
 - Added this file and `.claude/` to `.gitignore`. No code changes.
@@ -79,4 +84,3 @@ Add an entry for every change: date, who, what changed, why, how it was checked,
 
 - Update the written report and slides with the 1.3 numbers when the team decides to present them as done.
 - The fairness offsets must be refitted when PDs shift (stress-test finding).
-- `README.md` and code still say "Assay"; rename to "Parity" only if the team wants it in the product too.
