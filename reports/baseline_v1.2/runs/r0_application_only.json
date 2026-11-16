@@ -1,0 +1,21 @@
+{
+  "run": "r0_application_only",
+  "time": "2026-10-13 06:17:36",
+  "features": 250,
+  "rounds": 223,
+  "cv_auc": 0.7575537828303073,
+  "cv_sd": 0.0009676335073847124,
+  "test": {
+    "roc_auc": 0.764877023424639,
+    "pr_auc": 0.25018602222309755,
+    "brier": 0.06744598597288132,
+    "ece": 0.0025191064729164336,
+    "threshold": 0.16666666666666666,
+    "approval_rate": 0.8824116027489323,
+    "default_rate_among_approved": 0.05623664103383043,
+    "share_of_defaulters_declined": 0.38533834586466165,
+    "share_of_repayers_approved": 0.9059264674669245,
+    "eo_gap_gender": 0.04875279446061531,
+    "eo_gap_age": 0.1121662550573781
+  }
+}

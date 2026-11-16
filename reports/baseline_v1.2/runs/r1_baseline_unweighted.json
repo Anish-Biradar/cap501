@@ -1,0 +1,20 @@
+{
+  "run": "r1_baseline_unweighted",
+  "time": "2026-10-13 06:39:22",
+  "features": 449,
+  "rounds": 174,
+  "inner_holdout_auc": 0.7816057730159871,
+  "test": {
+    "roc_auc": 0.7852773118899309,
+    "pr_auc": 0.2792666470629451,
+    "brier": 0.06600943207740784,
+    "ece": 0.0035322674848711905,
+    "threshold": 0.16666666666666666,
+    "approval_rate": 0.8781191059466256,
+    "default_rate_among_approved": 0.053474879644488334,
+    "share_of_defaulters_declined": 0.41836734693877553,
+    "share_of_repayers_approved": 0.9041577246892909,
+    "eo_gap_gender": 0.034752528087304335,
+    "eo_gap_age": 0.10314190604674278
+  }
+}

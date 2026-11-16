@@ -1,0 +1,29 @@
+=== Committed policy (models/fair_policy.json) ===
+Policy: models/fair_policy.json  thresholds={'Female|35 and over': 0.16666666666666666, 'Female|Under 35': 0.21727845754542083, 'Male|35 and over': 0.17871709306637004, 'Male|Under 35': 0.2707823507601038}
+  [PASS] G1    model files match the saved predictions (manifest): all match
+  [PASS] G2    calibrator reproduces the saved PDs: max difference 0.0e+00
+  [SKIP] G3    booster re-scores frozen applicants: NOT RUN: gate_sample.parquet not committed (run src/make_gate_sample.py)
+  [PASS] POL   every policy group has a cut-off: ok
+  [PASS] NFR1  ROC-AUC >= 0.75: 0.7849
+  [PASS] NFR2  ECE <= 0.05: 0.0030
+  [PASS] NFR3  equal-opportunity gap (gender) <= 0.05: 0.0089
+  [PASS] NFR3  equal-opportunity gap (age <35 vs 35+) <= 0.05: 0.0077
+  [PASS] R-4   every gated group has >= 30 repayers: 4708
+  [INFO] INFO  gap across the four gender x age groups (reported, not gated): 0.0248
+GATE PASSED
+exit code: 0
+
+=== Deliberately unfair commit (demo/unfair_commit_policy.json) ===
+Policy: demo/unfair_commit_policy.json  thresholds={'all': 0.16666666666666666}
+  [PASS] G1    model files match the saved predictions (manifest): all match
+  [PASS] G2    calibrator reproduces the saved PDs: max difference 0.0e+00
+  [SKIP] G3    booster re-scores frozen applicants: NOT RUN: gate_sample.parquet not committed (run src/make_gate_sample.py)
+  [PASS] POL   every policy group has a cut-off: ok
+  [PASS] NFR1  ROC-AUC >= 0.75: 0.7849
+  [PASS] NFR2  ECE <= 0.05: 0.0030
+  [PASS] NFR3  equal-opportunity gap (gender) <= 0.05: 0.0328
+  [FAIL] NFR3  equal-opportunity gap (age <35 vs 35+) <= 0.05: 0.1027
+  [PASS] R-4   every gated group has >= 30 repayers: 4708
+  [INFO] INFO  gap across the four gender x age groups (reported, not gated): 0.1238
+GATE FAILED - this commit cannot be merged
+exit code: 1

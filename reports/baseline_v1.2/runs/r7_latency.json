@@ -1,0 +1,136 @@
+{
+  "n": 1000,
+  "p50_ms": 5.266124999820931,
+  "p95_ms": 8.31218249994663,
+  "p99_ms": 9.247809509943181,
+  "p95_ms_incl_http": 15.940968850088666,
+  "NFR4_pass": true,
+  "refer_rate": 0.083,
+  "rejected_by_validation": 0,
+  "rejections": [],
+  "example_refer_response": {
+    "decision_id": "ca1d11ba8acb41ff9068864554df843c",
+    "probability_of_default": 0.21404457092285156,
+    "band": "D",
+    "decision": "refer",
+    "cutoff_applied": 0.16666666666666666,
+    "needs_human_review": true,
+    "adverse_action_reasons": [
+      {
+        "reason": "External credit scores",
+        "shap_logodds": 0.37868878338485956,
+        "features": [
+          "EXT_SOURCE_2",
+          "EXT_SOURCE_MEAN",
+          "EXT_SOURCE_3"
+        ],
+        "effect": "raises risk"
+      },
+      {
+        "reason": "Past instalment payments",
+        "shap_logodds": 0.25534535478800535,
+        "features": [
+          "INS_AMT_PAYMENT_SUM",
+          "INS_AMT_PAYMENT_MEAN",
+          "INS_DBD_MAX"
+        ],
+        "effect": "raises risk"
+      },
+      {
+        "reason": "Employment",
+        "shap_logodds": 0.22706641588592902,
+        "features": [
+          "DAYS_EMPLOYED",
+          "ORGANIZATION_TYPE_Self-employed",
+          "NAME_INCOME_TYPE_Working"
+        ],
+        "effect": "raises risk"
+      },
+      {
+        "reason": "Previous applications with this lender",
+        "shap_logodds": 0.18207451648231654,
+        "features": [
+          "PREV_DAYS_LAST_DUE_1ST_VERSION_MAX",
+          "PREV_AMT_ANNUITY_MIN",
+          "PREV_DAYS_LAST_DUE_1ST_VERSION_MEAN"
+        ],
+        "effect": "raises risk"
+      }
+    ],
+    "top_factors": [
+      {
+        "reason": "External credit scores",
+        "shap_logodds": 0.37868878338485956,
+        "features": [
+          "EXT_SOURCE_2",
+          "EXT_SOURCE_MEAN",
+          "EXT_SOURCE_3"
+        ],
+        "effect": "raises risk"
+      },
+      {
+        "reason": "Past instalment payments",
+        "shap_logodds": 0.25534535478800535,
+        "features": [
+          "INS_AMT_PAYMENT_SUM",
+          "INS_AMT_PAYMENT_MEAN",
+          "INS_DBD_MAX"
+        ],
+        "effect": "raises risk"
+      },
+      {
+        "reason": "Employment",
+        "shap_logodds": 0.22706641588592902,
+        "features": [
+          "DAYS_EMPLOYED",
+          "ORGANIZATION_TYPE_Self-employed",
+          "NAME_INCOME_TYPE_Working"
+        ],
+        "effect": "raises risk"
+      },
+      {
+        "reason": "Previous applications with this lender",
+        "shap_logodds": 0.18207451648231654,
+        "features": [
+          "PREV_DAYS_LAST_DUE_1ST_VERSION_MAX",
+          "PREV_AMT_ANNUITY_MIN",
+          "PREV_DAYS_LAST_DUE_1ST_VERSION_MEAN"
+        ],
+        "effect": "raises risk"
+      },
+      {
+        "reason": "Identity documents and contact details",
+        "shap_logodds": 0.07891843755169248,
+        "features": [
+          "FLAG_WORK_PHONE",
+          "DAYS_ID_PUBLISH",
+          "FLAG_DOCUMENT_3"
+        ],
+        "effect": "raises risk"
+      }
+    ],
+    "data_quality": {
+      "filled_from_clock": [],
+      "documents_defaulted_to_not_provided": 0,
+      "optional_categories_not_given": [
+        "FONDKAPREMONT_MODE",
+        "HOUSETYPE_MODE",
+        "WALLSMATERIAL_MODE",
+        "EMERGENCYSTATE_MODE"
+      ],
+      "history_tables_supplied": [
+        "BUR",
+        "CC",
+        "INS",
+        "POS",
+        "PREV"
+      ]
+    },
+    "versions": {
+      "model_sha256": "428818c816cf6864",
+      "calibrator_sha256": "9e398461c36195a0",
+      "policy_sha256": "5c566e4587204891"
+    },
+    "latency_ms": 5.171334000124261
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "bound_files": {
+    "models/xgb.json": "428818c816cf6864c7c86225269c01e79081c4c927d3944e820c1a3b3044a36f",
+    "models/calibrator.pkl": "9e398461c36195a0e1be20b7d18cb36a27beed12391115c4b07183bcdb771242",
+    "models/features.json": "df373cd0a38fe4072459dde887846c2f78a317b50a4ce3d129c03bf1e36dfa97",
+    "runs/pred_valid.parquet": "c4ac4303b908f2ad64bf9fbde31835f5b3fcd18643f15331217dac55c41383da",
+    "runs/pred_test.parquet": "df7c19af83cd7a79f1fd1e7a8431442bafba73a998d8041dec2528b2dc470f42"
+  },
+  "note": "Written by train.py together with the model and predictions. Do not edit by hand."
+}

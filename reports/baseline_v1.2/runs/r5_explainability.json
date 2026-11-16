@@ -1,0 +1,111 @@
+{
+  "shap": {
+    "top_global": {
+      "EXT_SOURCE_MEAN": 0.2731805443763733,
+      "EXT_SOURCE_2": 0.14548161625862122,
+      "DAYS_EMPLOYED": 0.13509349524974823,
+      "EXT_SOURCE_3": 0.1236703023314476,
+      "CREDIT_TERM": 0.10614454746246338,
+      "GOODS_CREDIT_RATIO": 0.10601769387722015,
+      "AMT_ANNUITY": 0.09806134551763535,
+      "BUR_DEBT_CREDIT_RATIO_MAX": 0.09721610695123672,
+      "PREV_DAYS_LAST_DUE_1ST_VERSION_MAX": 0.0941038653254509,
+      "EXT_SOURCE_1": 0.07797475904226303,
+      "INS_LATE_MEAN": 0.06805267930030823,
+      "INS_AMT_PAYMENT_SUM": 0.0673738494515419,
+      "BUR_DEBT_CREDIT_RATIO_MEAN": 0.05979776754975319,
+      "OWN_CAR_AGE": 0.05511318892240524,
+      "EXT_SOURCE_PROD": 0.05103353410959244
+    },
+    "top5_coverage": 1.0,
+    "example_highest_risk": [
+      {
+        "feature": "EXT_SOURCE_MEAN",
+        "value": 0.12297729402780533,
+        "shap_logodds": 0.5920317769050598
+      },
+      {
+        "feature": "EXT_SOURCE_3",
+        "value": 0.16244199872016907,
+        "shap_logodds": 0.2687068283557892
+      },
+      {
+        "feature": "EXT_SOURCE_1",
+        "value": 0.019925422966480255,
+        "shap_logodds": 0.26471269130706787
+      },
+      {
+        "feature": "BUR_DEBT_CREDIT_RATIO_MAX",
+        "value": 1.0204733610153198,
+        "shap_logodds": 0.25591588020324707
+      },
+      {
+        "feature": "EXT_SOURCE_PROD",
+        "value": 0.0006038579158484936,
+        "shap_logodds": 0.2268984466791153
+      }
+    ],
+    "treeshap_ms_per_applicant": 21.22759938499712
+  },
+  "recourse": {
+    "declines_sampled": 100,
+    "share_with_recourse": 0.85,
+    "median_loan_cut_pct": 0.0,
+    "found_by": {
+      "DiCE": 76,
+      "grid": 9
+    },
+    "share_with_recourse_by_gender": {
+      "Female": 0.8653846153846154,
+      "Male": 0.8333333333333334
+    },
+    "share_with_recourse_by_age": {
+      "35 and over": 0.8309859154929577,
+      "Under 35": 0.896551724137931
+    },
+    "pd_with_recourse_median": 0.27069351077079773,
+    "pd_without_recourse_median": 0.48148152232170105,
+    "examples": [
+      {
+        "SK_ID_CURR": 216108,
+        "pd_now": 0.21404457092285156,
+        "credit_now": 900000.0,
+        "annuity_now": 29164.5,
+        "credit_cf": 900000.0,
+        "annuity_cf": 23793.9
+      },
+      {
+        "SK_ID_CURR": 303404,
+        "pd_now": 0.2062043845653534,
+        "credit_now": 215640.0,
+        "annuity_now": 11826.0,
+        "credit_cf": 141651.3,
+        "annuity_cf": 9063.6
+      },
+      {
+        "SK_ID_CURR": 418174,
+        "pd_now": 0.2062043696641922,
+        "credit_now": 50940.0,
+        "annuity_now": 6174.0,
+        "credit_cf": 50940.0,
+        "annuity_cf": 5247.9
+      },
+      {
+        "SK_ID_CURR": 355113,
+        "pd_now": 0.2062043845653534,
+        "credit_now": 202500.0,
+        "annuity_now": 10125.0,
+        "credit_cf": 202500.0,
+        "annuity_cf": 8207.6
+      },
+      {
+        "SK_ID_CURR": 348021,
+        "pd_now": 0.33043476939201355,
+        "credit_now": 760225.5,
+        "annuity_now": 34483.5,
+        "credit_cf": 760225.5,
+        "annuity_cf": 7275.9
+      }
+    ]
+  }
+}

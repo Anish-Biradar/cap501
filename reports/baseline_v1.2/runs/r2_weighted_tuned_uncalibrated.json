@@ -1,0 +1,55 @@
+{
+  "run": "r2_weighted_tuned_uncalibrated",
+  "time": "2026-10-13 06:41:25",
+  "params": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "tree_method": "hist",
+    "nthread": 2,
+    "seed": 42,
+    "eta": 0.08,
+    "max_depth": 4,
+    "min_child_weight": 5,
+    "subsample": 0.8,
+    "colsample_bytree": 0.3,
+    "scale_pos_weight": 11.387293548944006
+  },
+  "rounds": 289,
+  "inner_holdout_auc": 0.7824258260176461,
+  "search": [
+    {
+      "max_depth": 4,
+      "min_child_weight": 5,
+      "colsample_bytree": 0.3,
+      "rounds": 289,
+      "inner_holdout_auc": 0.7824258260176461
+    },
+    {
+      "max_depth": 5,
+      "min_child_weight": 10,
+      "colsample_bytree": 0.4,
+      "rounds": 255,
+      "inner_holdout_auc": 0.7806080988331835
+    },
+    {
+      "max_depth": 6,
+      "min_child_weight": 20,
+      "colsample_bytree": 0.3,
+      "rounds": 210,
+      "inner_holdout_auc": 0.7819651701463463
+    }
+  ],
+  "test": {
+    "roc_auc": 0.7853978910050672,
+    "pr_auc": 0.2786394189821502,
+    "brier": 0.1774086356163025,
+    "ece": 0.3019131576744921,
+    "threshold": 0.16666666666666666,
+    "approval_rate": 0.17978624233095583,
+    "default_rate_among_approved": 0.0116966116001447,
+    "share_of_defaulters_declined": 0.973952738990333,
+    "share_of_repayers_approved": 0.19328821073980615,
+    "eo_gap_gender": 0.04210818658059706,
+    "eo_gap_age": 0.11748965888712051
+  }
+}

@@ -1,0 +1,29 @@
+=== Committed policy (models/fair_policy.json) ===
+Policy: /Users/anishkumarbiradar/Desktop/cap501/models/fair_policy.json  {'Female|35 and over': -851.627382561276, 'Female|Under 35': -7755.638052092625, 'Male|35 and over': -690.5861873394856, 'Male|Under 35': -13653.854713206145}
+  [PASS] G1    model files match the saved predictions (manifest): all match
+  [PASS] G2    calibrator reproduces the saved PDs: max difference 0.0e+00
+  [PASS] G3    booster re-scores 1,999 frozen applicants: max difference 0.0e+00
+  [PASS] POL   every policy group has a cut-off: ok
+  [PASS] NFR1  ROC-AUC >= 0.75, lower 95% bound: 0.7853 (95% CI 0.7782 to 0.7927)
+  [PASS] NFR2  ECE <= 0.05, upper 95% bound: 0.0032 (95% CI 0.0024 to 0.0060)
+  [PASS] NFR3  equal-opportunity gap (gender) <= 0.05, upper 95% bound: 0.0210 (95% CI 0.0159 to 0.0262)
+  [PASS] NFR3  equal-opportunity gap (age <35 vs 35+) <= 0.05, upper 95% bound: 0.0222 (95% CI 0.0163 to 0.0278)
+  [PASS] R-4   every gated group has >= 30 repayers: 4708
+  [INFO] INFO  gap across the four gender x age groups (reported, not gated): 0.0329
+GATE PASSED
+exit code: 0
+
+=== Deliberately unfair commit (demo/unfair_commit_policy.json) ===
+Policy: demo/unfair_commit_policy.json  {'all': 0.16666666666666666}
+  [PASS] G1    model files match the saved predictions (manifest): all match
+  [PASS] G2    calibrator reproduces the saved PDs: max difference 0.0e+00
+  [PASS] G3    booster re-scores 1,999 frozen applicants: max difference 0.0e+00
+  [PASS] POL   every policy group has a cut-off: ok
+  [PASS] NFR1  ROC-AUC >= 0.75, lower 95% bound: 0.7853 (95% CI 0.7782 to 0.7927)
+  [PASS] NFR2  ECE <= 0.05, upper 95% bound: 0.0032 (95% CI 0.0024 to 0.0060)
+  [PASS] NFR3  equal-opportunity gap (gender) <= 0.05, upper 95% bound: 0.0360 (95% CI 0.0298 to 0.0426)
+  [FAIL] NFR3  equal-opportunity gap (age <35 vs 35+) <= 0.05, upper 95% bound: 0.1159 (95% CI 0.1084 to 0.1240)
+  [PASS] R-4   every gated group has >= 30 repayers: 4708
+  [INFO] INFO  gap across the four gender x age groups (reported, not gated): 0.1387
+GATE FAILED - this commit cannot be merged
+exit code: 1
